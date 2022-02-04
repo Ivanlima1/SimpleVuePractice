@@ -11,20 +11,38 @@
     <div id="app">
         <h3>V-bind exemplo</h3>
         <span v-bind:title="teste">Passe o mouse em cima</span>
+
+        <h3>V-model exemplo</h3>
+        <input v-model="inputUsuario" type="text" placeholder="Insira seu texto">
+        <span>Olha aqui seu input -> {{inputUsuario}}</span><br>
+
+        <h3>V-if exemplo</h3>
+        <input type="radio" value='Mostrar' v-model='mostrar' name='mostrar'>Mostrar
+        <input type="radio" value='Esconder' v-model='mostrar' name='mostrar'>Esconder<br>
+        <span v-if='mostrar === "Esconder"'>Uma mensagem sobre você esta sendo escondida</span>
+        <span v-else>Você é fera</span>
+
+        <h3>V-for exemplo</h3>
+        <ul id="app">
+            <li v-for="item in lista" :key="item.message">
+              {{ item.nome }}
+              {{ item.idade }}
+            </li>
+          </ul>
     </div>
         
-    <div id="app2">
+    <!--<div id="app2">
         <h3>V-model exemplo</h3>
         <input v-model="inputUsuario" type="text" placeholder="Insira seu texto">
         <span>Olha aqui seu input -> {{inputUsuario}}</span><br>
     </div>
     <div id="app3">
         <h3>V-if exemplo</h3>
-        <input type="radio" v-model='mostrar' name='mostrar'>Mostrar
-        <input type="radio" v-model='mostrar' name='mostrar'>Esconder
-        <span v-if='mostrar === true'>Você é fera!</span>
-        <span v-if='mostrar === false'>Uma mensagem sobre você esta sendo escondida</span>
-    </div>
+        <input type="radio" value='Mostrar' v-model='mostrar' name='mostrar'>Mostrar
+        <input type="radio" value='Esconder' v-model='mostrar' name='mostrar'>Esconder<br>
+        <span v-if='mostrar === "Esconder"'>Uma mensagem sobre você esta sendo escondida</span>
+        <span v-else>Você é fera</span>
+    </div>-->
 </body>
 <script type="text/javascript" src="script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
