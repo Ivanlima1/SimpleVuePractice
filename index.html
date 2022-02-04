@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h3>V-bind exemplo</h3>
+        <span v-bind:title="teste">Passe o mouse em cima</span>
+    </div>
+        
+    <div id="app2">
+        <h3>V-model exemplo</h3>
+        <input v-model="inputUsuario" type="text" placeholder="Insira seu texto">
+        <span>Olha aqui seu input -> {{inputUsuario}}</span><br>
+    </div>
+    <div id="app3">
+        <h3>V-if exemplo</h3>
+        <input type="radio" v-model='mostrar' name='mostrar'>Mostrar
+        <input type="radio" v-model='mostrar' name='mostrar'>Esconder
+        <span v-if='mostrar === true'>Você é fera!</span>
+        <span v-if='mostrar === false'>Uma mensagem sobre você esta sendo escondida</span>
+    </div>
+</body>
+<script type="text/javascript" src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</html>
